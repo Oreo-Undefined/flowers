@@ -1,0 +1,421 @@
+body{
+	font-size: 20px;
+	height: 100%;
+	width: 100%;
+	background:#000;
+	overflow: hidden;
+}
+#bg-star{
+	top: 30%;
+	left: 30%;
+	height: 2px;
+	width: 2px;
+	position: absolute;
+	transform-style: preserve-3d;
+	box-shadow: 10em 10em yellow,
+	2.5em 10em white,10em 5em yellow,
+	20em 0em white,0em 20em white,
+	20em 20em white,25em 20em lightyellow,
+	40em 35em white,25em 40em white,
+	10em 50em white,60em 0em white,
+	5em 0em white,15em 40em yellow,
+	45em 30em white,30em 20em lightyellow,
+	35em 15em white,15em 35em yellow;
+	transform-origin: -10em 10em;
+	animation: stars 20s linear infinite;
+}
+@keyframes stars{
+	from{
+		transform: translateZ(0em) rotate(0deg);
+		
+	}
+	to{
+		transform: translateZ(80em) rotate(360deg);
+	}
+}
+#bg-star:before,#bg-star:after{
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background-color: white;
+	box-shadow: inherit;
+}
+#bg-star:before{
+	transform: translateZ(-100em);
+}
+#bg-star:after{
+	transform: translateZ(-50em);
+}
+#flower-container{
+	margin: 1em auto;
+	height: 25em;
+	width: 25em;
+	position: relative;
+	perspective: 50em;
+	transform: rotateX(30deg);
+}
+#flower-container span{
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	left: 50%;
+	background-image: linear-gradient(0deg,red 0%,white 103%);
+	transform-origin: center bottom;
+	box-shadow: 0 0 5em white;
+}
+#flower-container div:not(:empty){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+}
+#flower-outer{
+	height: inherit;
+	width: inherit;
+	margin: -12.5em 0 0 -12.5em;
+	transform-style: preserve-3d;
+	transform: rotateX(30deg) rotateZ(20deg);
+	animation: outerdiv 10s linear infinite alternate;
+}
+#flower-center{
+	height: 18em;
+	width: 18em;
+	margin: -9em 0 0 -9em;
+	transform-style: preserve-3d;
+	transform: rotateZ(22.5deg);
+}
+#flower-inner{
+	height: 10em;
+	width: 10em;
+	margin: -5em 0 0 -5em;
+	transform-style: preserve-3d;
+	transform: rotateZ(-22.5deg);
+}
+.flower-outer{
+	top: 0.5em;
+	height: 12em;
+	width: 5em;
+	margin-left: -1.5em;
+	opacity: 0.6;
+}
+@keyframes outerdiv{
+	0%{
+		transform: rotateX(30deg) rotateZ(20deg);
+	}
+	100%{
+		transform: rotateX(30deg) rotateZ(380deg);
+	}
+}
+.flower-center{
+	height: 9em;
+	width: 4em;
+	margin-left: -1em;
+	opacity: 0.8;
+}
+.flower-inner{
+	height: 5em;
+	width: 2.5em;
+	margin-left: -0.75em;
+	opacity: 0.9;
+}
+.outer1{
+	transform: rotateZ(0deg) rotateX(-15deg);
+	animation: flowerouter1 2s ease-in-out 1s backwards;
+}
+.center1{
+	transform: rotateZ(0deg) rotateX(-30deg);
+	animation: flowercenter1 3s ease-in-out 2s backwards;
+}
+.inner1{
+	transform: rotateZ(0deg) rotateX(-60deg);
+	animation: flowerinner1 4s ease-in-out 3s backwards;
+}
+.outer2{
+	transform: rotateZ(45deg) rotateX(-15deg);
+	animation: flowerouter2 2s ease-in-out 1s backwards;
+}
+.center2{
+	transform: rotateZ(45deg) rotateX(-30deg);
+	animation: flowercenter2 3s ease-in-out 2s backwards;
+}
+.inner2{
+	transform: rotateZ(45deg) rotateX(-60deg);
+	animation: flowerinner2 4s ease-in-out 3s backwards;
+}
+.outer3{
+	transform: rotateZ(90deg) rotateX(-15deg);
+	animation: flowerouter3 2s ease-in-out 1s backwards;
+}
+.center3{
+	transform: rotateZ(90deg) rotateX(-30deg);
+	animation: flowercenter3 3s ease-in-out 2s backwards;
+}
+.inner3{
+	transform: rotateZ(90deg) rotateX(-60deg);
+	animation: flowerinner3 4s ease-in-out 3s backwards;
+}
+.outer4{
+	transform: rotateZ(135deg) rotateX(-15deg);
+	animation: flowerouter4 2s ease-in-out 1s backwards;
+}
+.center4{
+	transform: rotateZ(135deg) rotateX(-30deg);
+	animation: flowercenter4 3s ease-in-out 2s backwards;
+}
+.inner4{
+	transform: rotateZ(135deg) rotateX(-60deg);
+	animation: flowerinner4 4s ease-in-out 3s backwards;
+}
+.outer5{
+	transform: rotateZ(180deg) rotateX(-15deg);
+	animation: flowerouter5 2s ease-in-out 1s backwards;
+}
+.center5{
+	transform: rotateZ(180deg) rotateX(-30deg);
+	animation: flowercenter5 3s ease-in-out 2s backwards;
+}
+.inner5{
+	transform: rotateZ(180deg) rotateX(-60deg);
+	animation: flowerinner5 4s ease-in-out 3s backwards;
+}
+.outer6{
+	transform: rotateZ(225deg) rotateX(-15deg);
+	animation: flowerouter6 2s ease-in-out 1s backwards;
+}
+.center6{
+	transform: rotateZ(225deg) rotateX(-30deg);
+	animation: flowercenter6 3s ease-in-out 2s backwards;
+}
+.inner6{
+	transform: rotateZ(225deg) rotateX(-60deg);
+	animation: flowerinner6 4s ease-in-out 3s backwards;
+}
+.outer7{
+	transform: rotateZ(270deg) rotateX(-15deg);
+	animation: flowerouter7 2s ease-in-out 1s backwards;
+}
+.center7{
+	transform: rotateZ(270deg) rotateX(-30deg);
+	animation: flowercenter7 3s ease-in-out 2s backwards;
+}
+.inner7{
+	transform: rotateZ(270deg) rotateX(-60deg);
+	animation: flowerinner7 4s ease-in-out 3s backwards;
+}
+.outer8{
+	transform: rotateZ(315deg) rotateX(-15deg);
+	animation: flowerouter8 2s ease-in-out 1s backwards;
+}
+.center8{
+	transform: rotateZ(315deg) rotateX(-30deg);
+	animation: flowercenter8 3s ease-in-out 2s backwards;
+}
+.inner8{
+	transform: rotateZ(315deg) rotateX(-60deg);
+	animation: flowerinner8 4s ease-in-out 3s backwards;
+}
+@keyframes flowerouter1{
+	from{
+		transform: rotateZ(0deg) rotateX(-90deg);
+	}
+	to{
+		transform: rotateZ(0deg) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter2{
+	from{
+		transform: rotateZ(45deg) rotateX(-90deg);
+	}
+	to{
+		transform: rotateZ(45deg) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter3{
+	from{
+		transform: rotateZ(90deg) rotateX(-90deg);
+	}
+	to{
+		transform: rotateZ(90deg) rotateX(-15);
+	}
+}
+@keyframes flowerouter4{
+	from{
+		transform: rotateZ(135deg) rotateX(-90deg);
+	}
+	to{
+		transform: rotateZ(135deg) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter5{
+	from{
+		transform:rotateZ(180deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(180) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter6{
+	from{
+		transform:rotateZ(225deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(225deg) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter7{
+	from{
+		transform:rotateZ(270deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(270deg) rotateX(-15deg);
+	}
+}
+@keyframes flowerouter8{
+	from{
+		transform:rotateZ(315deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(315deg) rotateX(-15deg);
+	}
+}
+@keyframes flowercenter1{
+	from{
+		transform:rotateZ(0deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(0deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter2{
+	from{
+		transform:rotateZ(45deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(45deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter3{
+	from{
+		transform:rotateZ(90deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(90deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter4{
+	from{
+		transform:rotateZ(135deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(135deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter5{
+	from{
+		transform:rotateZ(180deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(180deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter6{
+	from{
+		transform:rotateZ(225deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(225deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter7{
+	from{
+		transform:rotateZ(270deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(270deg) rotateX(-30deg);
+	}
+}
+@keyframes flowercenter8{
+	from{
+		transform:rotateZ(315deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(315deg) rotateX(-30deg);
+	}
+}
+@keyframes flowerinner1{
+	from{
+		transform:rotateZ(0deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(0deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner2{
+	from{
+		transform:rotateZ(45deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(45deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner3{
+	from{
+		transform:rotateZ(90deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(90deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner4{
+	from{
+		transform:rotateZ(135deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(135deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner5{
+	from{
+		transform:rotateZ(180deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(180deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner6{
+	from{
+		transform:rotateZ(225deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(225deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner7{
+	from{
+		transform:rotateZ(270deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(270deg) rotateX(-60deg);
+	}
+}
+@keyframes flowerinner8{
+	from{
+		transform:rotateZ(315deg) rotateX(-90deg);
+	}
+	to{
+		transform:rotateZ(315deg) rotateX(-60deg);
+	}
+}
+.text{
+	display:none;
+	color: white;
+	width: 40em;
+	line-height: 2em;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-bottom: 10em;
+}
+.text:first-line{
+	text-indent: 2em;
+}
